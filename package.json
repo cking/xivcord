@@ -1,0 +1,15 @@
+{
+  "name": "ffxiv",
+  "version": "1.0.0",
+  "description": "FFXIV Discord Theme",
+  "scripts": {
+    "watch": "stylus -U -w -l -m --hoist-atrules -o . src/theme.styl",
+    "build": "stylus -U -c       --hoist-atrules -o . src/theme.styl",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kura Bloodlust",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "stylus": "^0.54.5"
+  }
+}
