@@ -28,8 +28,8 @@ body {
 #app-mount .titlebar {
   window-title()
   position: absolute
-  right: 0
   top: 1px // reenable resize hack
+  right: 0
   width: initial
   height: 35px
 
@@ -56,8 +56,8 @@ body {
 }
 
 .guilds-wrapper {
-  width: 60px
   padding-bottom: 1rem
+  width: 60px
 
   .guilds {
     padding-top: .2rem
@@ -174,15 +174,14 @@ body {
 
 .channels-wrap {
   clickThrough(before)
-
-  padding-left: 10px;
+  padding-left: 10px
 
   &:before {
     vertical-line()
   }
 
-  > [class*="flex"] {
-    [class*="flexChild"] {
+  > [class*='flex'] {
+    [class*='flexChild'] {
       margin-left: -8px
     }
 
@@ -218,7 +217,7 @@ body {
 }
 
 /*
-
+   
    .button {
    background: linear-gradient(to bottom, #5b5b5b, #4c4c4c 50%, #373737 51%, #454545);
    border: 1px solid #171717;
@@ -232,11 +231,11 @@ body {
    margin: 0.2rem 0.5rem;
    padding: 0.2rem 1rem;
    }
-
+   
    .button:hover {
    cursor: pointer;
    }
-
+   
    .button:hover:after {
    content: "";
    pointer-events: none;
@@ -248,11 +247,11 @@ body {
    left: 0;
    border-radius: 1rem;
    }
-
+   
    .button.disabled {
    cursor: default;
    }
-
+   
    .button.disabled:after {
    content: "";
    pointer-events: none;
