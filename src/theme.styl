@@ -8,22 +8,12 @@ body {
 
 #app-mount .app {
   window()
-  clickThrough(before)
-
   position: absolute
   margin: 1px
   margin-right: 1px
   padding-top: 34px
   padding-right: 5px
   padding-bottom: 0
-
-  &:before {
-    horizontal-line(top)
-    z-index: 666
-    left: calc(1rem + 60px)
-    top: 87px;
-    right: 5px
-  }
 }
 
 #app-mount .titlebar {
@@ -206,6 +196,17 @@ body {
       &:after {
         vertical-line(right)
       }*/
+  }
+}
+
+.layer:first-child {
+  clickThrough(before)
+
+  &:before {
+    horizontal-line(top)
+    top: 55px
+    left: 60px
+    z-index: 666
   }
 }
 
