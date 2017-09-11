@@ -164,7 +164,6 @@ body {
 }
 
 .channels-wrap {
-  clickThrough(before)
   padding-left: 10px
 
   &:before {
@@ -175,27 +174,50 @@ body {
     [class*='flexChild'] {
       margin-left: -8px
     }
-
-    [class*="scrollerWrap"] {
-      /*clickThrough(before)
-
-      &:before {
-        vertical-line(right)
-      }*/
-    }
   }
-  > :not([class*="flex"]) {
-      /*clickThrough(before)
-      clickThrough(after)
 
-      margin-left: -8px
+  .containerDefault-1bbItS {
+    padding-top: 1rem
 
-      &:before {
-        horizontal-line(top)
+    > [class*='flex'] {
+      padding-left: 5px
+
+      svg {
+        display: none
       }
-      &:after {
-        vertical-line(right)
-      }*/
+
+      [class*='nameDefault'],
+      [class*='nameHovered'],
+      [class*='nameCollapsed'] {
+        position: relative
+        text-transform: inherit
+        letter-spacing: -1px
+        font-variant: small-caps
+        font-size: 1rem
+
+        &:after {
+          position: absolute
+          right: 5px
+          display: inline-block
+          content: '\f35e'
+          text-transform: none
+          font-weight: normal
+          font-style: normal
+          font-variant: normal
+          font-family: 'Ionicons'
+          line-height: 1
+          transition: transform .5s ease
+          speak: none
+          text-rendering: auto
+          -webkit-font-smoothing: antialiased
+        }
+      }
+
+      [class*='nameCollapsed']:after,
+      [class*='nameHoveredCollapsed']:after {
+        transform: rotate(90deg)
+      }
+    }
   }
 }
 
