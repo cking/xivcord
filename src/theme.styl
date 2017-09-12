@@ -316,6 +316,16 @@ body {
       background-image: url('img/chocobo.png')
     }
   }
+
+  [class*='scrollerWrap'] {
+    clickThrough(after)
+
+    &:after {
+      left: initial
+      width: 3px
+      background: radial-gradient(#0004, transparent 66%)
+    }
+  }
 }
 
 .layer:first-child {
