@@ -6,7 +6,7 @@ A custom discord theme, designed after the popular MMO FFXIV.
 
 ## Preview
 
-![Preview](https://kura.is-pretty.sexy/8877c0.png)
+![Preview](https://kura.is-pretty.sexy/284246.png)
 
 ## Installation
 
