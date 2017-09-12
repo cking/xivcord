@@ -249,7 +249,8 @@ body {
       filter: hue-rotate(200deg)
     }
 
-    [class*='nameMutedText'] {
+    [class*='nameMutedText'],
+    [class*='nameLockedVoice'] {
       color: darken(#eee1c5, 50)
     }
 
@@ -264,16 +265,26 @@ body {
     [class*='nameHoveredText']:before,
     [class*='nameMutedText']:before,
     [class*='nameDefaultText']:before,
-    [class*='nameUnreadText']:before {
+    [class*='nameUnreadText']:before,
+    [class*='nameLockedVoice']:before,
+    [class*='nameDefaultVoice']:before,
+    [class*='nameSelectedVoice']:before,
+    [class*='nameHoveredVoice']:before,
+    [class*='nameLockedVoice']:before {
       position: relative
       top: .1rem
       display: inline-block
       margin-right: .2rem
       width: 1rem
       height: 1rem
-      background: url('img/pet.png')
+      background-image: url('img/pet.png')
       background-size: cover
       content: ''
+    }
+
+    [class*='nameLockedVoice']:before,
+    [class*='nameMutedText']:before {
+      filter: brightness(40%)
     }
 
     [class*='contentSelectedText'],
@@ -298,21 +309,11 @@ body {
       // box-shadow: 0 0 5px #eee1c544
     }
 
-    [class*='nameDefaultVoice'] {
-    }
-
     [class*='nameDefaultVoice']:before,
     [class*='nameSelectedVoice']:before,
-    [class*='nameHoveredVoice']:before {
-      position: relative
-      top: .1rem
-      display: inline-block
-      margin-right: .2rem
-      width: 1rem
-      height: 1rem
-      background: url('img/chocobo.png')
-      background-size: cover
-      content: ''
+    [class*='nameHoveredVoice']:before,
+    [class*='nameLockedVoice']:before {
+      background-image: url('img/chocobo.png')
     }
   }
 }
