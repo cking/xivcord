@@ -1,0 +1,166 @@
+.channels-wrap {
+  clickThrough(before)
+  padding-left: 10px
+
+  &:before {
+    vertical-line(left, false)
+  }
+
+  > [class*='flex'] {
+    [class*='flexChild'] {
+      margin-left: -8px
+    }
+  }
+
+  .containerDefault-1bbItS {
+    [class*='flex'] {
+      padding-left: 5px
+
+      svg {
+        display: none
+      }
+
+      [class*='nameDefault'],
+      [class*='nameHovered'],
+      [class*='nameCollapsed'] {
+        position: relative
+        color: #75d2e6
+        text-transform: inherit
+        letter-spacing: -1px
+        font-variant: small-caps
+        font-size: 1rem
+        transition: color .5s
+
+        &:after {
+          position: absolute
+          right: 5px
+          display: inline-block
+          content: '\f35e'
+          text-transform: none
+          font-weight: normal
+          font-style: normal
+          font-variant: normal
+          font-family: 'Ionicons'
+          line-height: 1
+          transition: transform .5s ease
+          speak: none
+          text-rendering: auto
+          -webkit-font-smoothing: antialiased
+        }
+      }
+
+      [class*='nameHovered'] {
+        color: lighten(#75d2e6, 10)
+      }
+
+      [class*='nameCollapsed']:after,
+      [class*='nameHoveredCollapsed']:after {
+        transform: rotate(90deg)
+      }
+    }
+  }
+
+  .containerDefault-7RImuF {
+    svg {
+      display: none
+    }
+
+    [class*='wrapper'] [class*='unread'] {
+      display: none
+    }
+
+    [class*='nameDefaultText'],
+    [class*='nameDefaultVoice'] {
+      color: #eee1c5
+    }
+
+    [class*='nameUnreadText'] {
+      color: #b87aff
+    }
+
+    [class*='nameUnreadText']:before {
+      filter: hue-rotate(200deg)
+    }
+
+    [class*='nameMutedText'],
+    [class*='nameLockedVoice'] {
+      color: darken(#eee1c5, 50)
+    }
+
+    [class*='nameSelectedText'],
+    [class*='nameHoveredText'],
+    [class*='nameSelectedVoice'],
+    [class*='nameHoveredVoice'] {
+      color: lighten(#eee1c5, 10)
+    }
+
+    [class*='nameSelectedText']:before,
+    [class*='nameHoveredText']:before,
+    [class*='nameMutedText']:before,
+    [class*='nameDefaultText']:before,
+    [class*='nameUnreadText']:before,
+    [class*='nameLockedVoice']:before,
+    [class*='nameDefaultVoice']:before,
+    [class*='nameSelectedVoice']:before,
+    [class*='nameHoveredVoice']:before,
+    [class*='nameLockedVoice']:before {
+      position: relative
+      top: .1rem
+      display: inline-block
+      margin-right: .2rem
+      width: 1rem
+      height: 1rem
+      background-image: url('img/pet.png')
+      background-size: cover
+      content: ''
+    }
+
+    [class*='nameLockedVoice']:before,
+    [class*='nameMutedText']:before {
+      filter: brightness(40%)
+    }
+
+    [class*='contentSelectedText'],
+    [class*='contentSelectedVoice'] {
+      border-radius: 0
+      border-top-left-radius: .75rem
+      border-bottom-left-radius: .75rem
+      background: linear-gradient(to right, #eee1c544, transparent)
+      // box-shadow: 0 0 5px #eee1c544
+    }
+
+    [class*='contentSelectedVoice'] {
+      background: linear-gradient(to right, #b87aff44, transparent)
+    }
+
+    [class*='contentHoveredText'],
+    [class*='contentHoveredVoice'] {
+      border-radius: 0
+      border-top-left-radius: .75rem
+      border-bottom-left-radius: .75rem
+      background: linear-gradient(to right, alpha(darken(#eee1c5, 50), .3), transparent)
+      // box-shadow: 0 0 5px #eee1c544
+    }
+
+    [class*='nameDefaultVoice']:before,
+    [class*='nameSelectedVoice']:before,
+    [class*='nameHoveredVoice']:before,
+    [class*='nameLockedVoice']:before {
+      background-image: url('img/chocobo.png')
+    }
+  }
+
+  [class*='scrollerWrap'] {
+    clickThrough(after)
+
+    &:after {
+      left: initial
+      width: 3px
+      background: radial-gradient(#0004, transparent 66%)
+    }
+  }
+
+  .container-iksrDt {
+    @import 'userpanel'
+  }
+}

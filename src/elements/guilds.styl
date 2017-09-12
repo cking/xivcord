@@ -1,0 +1,113 @@
+.guilds-wrapper {
+  padding-bottom: 1rem
+  width: 60px
+
+  .guilds {
+    padding-top: .2rem
+    padding-left: 0
+
+    .guild {
+      red-button()
+      no-border-box-fix()
+
+      &.unread {
+        &:before {
+          position: absolute
+          top: 0
+          right: 0
+          bottom: 0
+          left: 0
+          margin: 0
+          width: initial
+          height: initial
+          border-radius: .5rem
+          background: transparent
+          box-shadow: 0 0 2px 1px #fff8cb
+        }
+      }
+
+      .guilds-add-inner {
+        overflow: visible
+        background: transparent !important
+        text-transform: none
+        font-weight: 400
+        font-style: normal
+        font-variant: normal
+        font-size: 0
+        font-family: RPGAwesome
+        line-height: 1
+        speak: none
+
+        &:before {
+          gold-tint()
+          position: relative
+          top: -.25rem
+          content: ''
+          font-size: 2rem
+          line-height: 2.25rem
+        }
+      }
+
+      .badge {
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        margin: 0
+        width: initial
+        height: initial
+        border-radius: .5rem
+        background: transparent
+        box-shadow: 0 0 2px 1px #b87aff
+        font-size: 0
+      }
+
+      .guild-inner {
+        overflow: visible
+        border-radius: 0 !important
+        background: transparent !important
+
+        a {
+          width: auto
+          height: auto
+
+          &.avatar-small {
+            margin-top: calc(-.25rem - 1px)
+            margin-left: calc(-.25rem - 1px)
+            width: 2.5rem
+            height: 2.5rem
+            border-radius: 1rem
+            background-size: 2.5rem
+
+            &:not(:empty) {
+              gold-tint()
+              font-weight: bold
+              font-size: 2rem !important
+              line-height: 2.25rem
+            }
+          }
+        }
+
+        .friends-icon {
+          width: auto
+          height: auto
+          background: transparent !important
+          text-transform: none
+          font-weight: 400
+          font-style: normal
+          font-variant: normal
+          font-size: 2rem
+          font-family: RPGAwesome
+          line-height: 1
+          speak: none
+
+          &:before {
+            gold-tint()
+            content: ''
+          }
+        }
+      }
+    }
+  }
+}
