@@ -64,21 +64,23 @@
       }
 
       .guild-inner {
-        overflow: visible
-        border-radius: 0 !important
+        margin-top: -.5rem
+        margin-left: -.5rem
+        width: calc(3rem - 2px)
+        height: calc(3rem - 2px)
+        border-radius: .45rem !important
         background: transparent !important
 
         a {
+          padding-top: .4rem
           width: auto
           height: auto
 
           &.avatar-small {
-            margin-top: calc(-.25rem - 1px)
-            margin-left: calc(-.25rem - 1px)
-            width: 2.5rem
-            height: 2.5rem
-            border-radius: 1rem
-            background-size: 2.5rem
+            width: 3rem
+            height: 3rem
+            background-position: -1px top
+            background-size: 3rem
 
             &:not(:empty) {
               gold-tint()
