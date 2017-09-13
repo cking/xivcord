@@ -2,4 +2,34 @@
   inset-box()
   margin: 0 .5rem .7rem -.25rem
   background: #0004 !important
+
+  .avatar-small {
+    item-button(ItemRelic)
+    margin-left: -6px
+    background-size: cover
+
+    .status {
+      top: 0
+      right: 0
+      bottom: initial
+      border: 1px solid black
+    }
+  }
+
+  [class*='accountDetails'] {
+    .username {
+      max-width: 150px
+    }
+  }
+
+  [class*='flex'] {
+    flex-direction: column
+    margin-left: 10px
+
+    > div > button,
+    > div[class*='button'] {
+      width: 16px
+      height: 16px
+    }
+  }
 }
