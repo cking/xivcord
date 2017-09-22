@@ -13,11 +13,53 @@
   }
 
   .containerDefault-1bbItS {
-    [class*='flex'] {
+    > [class*='flex'] {
       padding-left: 5px
 
       svg {
         display: none
+      }
+
+      div[class*="flex"] {
+        position: relative
+
+        div[class=""] {
+          position: absolute
+          right: 1.5rem
+          top: 0
+          height: 18px
+          with: 18px
+          color: #75d2e6
+          filter: hue-rotate(-30deg)
+
+          &:hover {
+            filter: hue-rotate(-30deg) brightness(1.2)
+          }
+
+          &:after {
+            content: '\f216'
+            position: absolute
+            top: 0
+            right: 0
+            display: inline-block
+            text-transform: none
+            font-weight: normal
+            font-style: normal
+            font-variant: normal
+            font-family: 'Ionicons'
+            line-height: 1
+            transition: transform .5s ease
+            speak: none
+            text-rendering: auto
+            -webkit-font-smoothing: antialiased
+            z-index: -1
+          }
+        }
+
+        svg {
+          display: block
+          opacity: 0
+        }
       }
 
       [class*='nameDefault'],
@@ -120,26 +162,45 @@
       filter: brightness(40%)
     }
 
-    [class*='contentSelectedText'],
-    [class*='contentSelectedVoice'] {
-      border-radius: 0
-      border-top-left-radius: .75rem
-      border-bottom-left-radius: .75rem
-      background: linear-gradient(to right, #eee1c544, transparent)
-      // box-shadow: 0 0 5px #eee1c544
+    [class*='content'] {
+      clickThrough(before)
+      clickThrough(after)
+      margin: 5px 0 5px .5rem
+      overflow: visible
+      height: 1.5rem
+      background: transparent !important
+
+      &:before {
+        border-radius: 0
+        border-top-left-radius: .75rem
+        border-bottom-left-radius: .75rem
+      }
+
+      &:after {
+        top: -10px
+        bottom: -10px
+        background: linear-gradient(to right, transparent, #313031) !important
+      }
+
+      > div {
+        z-index: 1
+      }
     }
 
-    [class*='contentSelectedVoice'] {
-      background: linear-gradient(to right, #b87aff44, transparent)
+    [class*='contentSelectedText']:before {
+      background: #eee1c544
+      box-shadow: 0 0 5px #eee1c544
     }
 
-    [class*='contentHoveredText'],
-    [class*='contentHoveredVoice'] {
-      border-radius: 0
-      border-top-left-radius: .75rem
-      border-bottom-left-radius: .75rem
-      background: linear-gradient(to right, alpha(darken(#eee1c5, 50), .3), transparent)
-      // box-shadow: 0 0 5px #eee1c544
+    [class*='contentSelectedVoice']:before {
+      background: #b87aff44
+      box-shadow: 0 0 5px #b87aff44
+    }
+
+    [class*='contentHoveredText']:before,
+    [class*='contentHoveredVoice']:before {
+      background: alpha(darken(#eee1c5, 50), .3)
+      box-shadow: 0 0 5px alpha(darken(#eee1c5, 50), .3)
     }
 
     [class*='nameDefaultVoice']:before,
@@ -152,8 +213,13 @@
 
   [class*='scrollerWrap'] {
     clickThrough(after)
+    clickThrough(before)
 
     &:after {
+      background: linear-gradient(to bottom, #313031 0, transparent 1%, transparent 99%, #313031 100%)
+    }
+
+    &:before {
       left: initial
       width: 3px
       background: radial-gradient(#0004, transparent 66%)
@@ -163,4 +229,60 @@
   .container-iksrDt {
     @import 'userpanel'
   }
+
+  .container-3lnMWU {
+    @import 'voicepanel'
+  }
+}
+
+.private-channels {
+  .channel {
+    clickThrough(before)
+    border-radius: 0
+    border-top-left-radius: .75rem
+    border-bottom-left-radius: .75rem
+    margin: 10px 0 10px 5px
+    overflow: visible
+    height: 1.5rem
+    color: #eee1c5
+    overflow: visible
+  }
+
+
+  .channel:before {
+    top: -10px
+    height: -10px
+    background: linear-gradient(to right, transparent, #313031) !important
+  }
+
+  .channel.private {
+    &.selected {
+      background: #eee1c544 !important
+      box-shadow: 0 0 5px #eee1c544
+    }
+    &:hover {
+      background: alpha(darken(#eee1c5, 50), .3) !important
+      box-shadow: 0 0 5px alpha(darken(#eee1c5, 50), .3)
+    }
+
+    > a {
+      background: none !important
+      padding: 0
+    }
+  }
+
+  .avatar-small {
+    item-button(ItemRelic)
+    margin-left: -10px
+    top: 1px
+    background-size: cover
+
+    .status {
+      top: 0
+      right: 0
+      bottom: initial
+      border: 1px solid black
+    }
+  }
+
 }

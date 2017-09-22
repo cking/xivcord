@@ -1,0 +1,30 @@
+&{
+  background: rgba(0,0,0,0.8) !important
+  box-shadow: 0 0 5px 5px rgba(0,0,0,0.8)
+  border-radius: 3px
+  border: none !important
+  //position: absolute
+  //bottom: 70px
+  //left: 10px
+  //right: 10px
+  margin: 10px 13px 10px 3px
+
+  [class*='flex'] {
+    flex-direction: column
+    margin: -5px -7px -5px 10px
+
+    > div > button,
+    > div[class*='button'] {
+      width: 16px
+      height: 16px
+    }
+
+    > :first-child {
+      margin-bottom: 5px
+    }
+    > :last-child {
+      margin-top: 5px
+    }
+
+  }
+}
