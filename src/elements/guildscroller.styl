@@ -1,14 +1,12 @@
 .guilds-wrapper {
-  padding-bottom: 1rem
-  width: 60px
-
+  // TODO: .unread-mentions-indicator-top
+  // TODO: .unread-mentions-indicator-bottom
   .guilds {
     padding-top: .2rem
     padding-left: 0
 
     .guild {
       red-button()
-      no-border-box-fix()
 
       &.unread {
         &:before {
@@ -22,26 +20,19 @@
           height: initial
           border-radius: .5rem
           background: transparent
-          box-shadow: 0 0 2px 1px #fff8cb
+          box-shadow: 0 0 2px 2px #fff8cb
         }
       }
 
       .guilds-add-inner {
-        overflow: visible
-        background: transparent !important
-        text-transform: none
-        font-weight: 400
-        font-style: normal
-        font-variant: normal
         font-size: 0
         font-family: RPGAwesome
-        line-height: 1
-        speak: none
 
         &:before {
           gold-tint()
           position: relative
-          top: -.25rem
+          top: -5px
+          left: -1px
           content: ''
           font-size: 2rem
           line-height: 2.25rem
@@ -49,17 +40,15 @@
       }
 
       .badge {
-        position: absolute
         top: 0
         right: 0
         bottom: 0
         left: 0
-        margin: 0
         width: initial
         height: initial
         border-radius: .5rem
         background: transparent
-        box-shadow: 0 0 2px 1px #b87aff
+        box-shadow: 0 0 2px 2px #b87aff
         font-size: 0
       }
 
@@ -73,8 +62,6 @@
 
         a {
           padding-top: .4rem
-          width: auto
-          height: auto
 
           &.avatar-small {
             width: 3rem
@@ -92,20 +79,15 @@
         }
 
         .friends-icon {
-          width: auto
-          height: auto
           background: transparent !important
-          text-transform: none
-          font-weight: 400
-          font-style: normal
-          font-variant: normal
           font-size: 2rem
           font-family: RPGAwesome
-          line-height: 1
-          speak: none
 
           &:before {
             gold-tint()
+            position: relative
+            top: -9px
+            left: -1px
             content: ''
           }
         }
