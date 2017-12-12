@@ -12,43 +12,6 @@ clickThrough(pseudo = after) {
   }
 }
 
-window() {
-  clickThrough()
-  padding: 1rem
-  border-radius: 10px
-  background: linear-gradient(to bottom, #76726e, #313031 30px) repeat-x
-  box-shadow: 0 0 2px 6px rgba(255, 255, 255, .4) inset, 1px 1px 3px 2px rgba(0, 0, 0, .4)
-
-  &:after {
-    border-width: 11px
-    border-style: solid
-    border-image: url('border.png') 11
-    border-image-outset: 2px
-  }
-}
-
-window-title(fixMargin = false) {
-  clickThrough()
-  padding: 5px 10px
-  color: #d2d2d2
-  text-shadow: 2px 2px 2px black
-  letter-spacing: -1px
-  font-weight: 700
-
-  if (fixMargin) {
-    margin: -.8rem -.8rem 1rem
-  }
-
-  &:after {
-    top: initial !important
-    right: 5px !important
-    left: 5px !important
-    height: 0 !important
-    border: 1px inset rgba(255, 255, 255, .2)
-    border-radius: 2px
-  }
-}
-
 red-button() {
   clickThrough()
   box-sizing: border-box
