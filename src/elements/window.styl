@@ -1,39 +1,5 @@
 #app-mount .app {
-  window()
-  position: absolute
-  margin: 1px
-  margin-right: 1px
-  padding-top: 34px
-  padding-right: 5px
-  padding-bottom: 0
-}
-
-#app-mount .titlebar {
-  window-title()
-  position: absolute
-  top: 1px // reenable resize hack
-  right: 0
-  width: initial
-  height: 25px
-
-  &:before {
-    position: relative
-    top: .4rem
-    left: .3rem
-    content: 'XIVCord'
-  }
-
-  &:after {
-    right: .8rem !important
-    left: .8rem !important
-  }
-
-  .titlebar-edge {
-    display: none
-  }
-
-  .win-buttons {
-    top: -8px
-    right: 8px
-  }
+  padding: 1rem
+  background: linear-gradient(to bottom, #76726e, #313031 15px) repeat-x
+  box-shadow: 0 0 2px 1px rgba(255, 255, 255, .4) inset
 }
