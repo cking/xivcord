@@ -1,4 +1,4 @@
-.channels-wrap {
+.channels-3g2vYe {
   clickThrough(before)
   padding-left: 10px
 
@@ -20,28 +20,29 @@
         display: none
       }
 
-      div[class*="flex"] {
+      div[class*='flex'] {
         position: relative
 
-        div[class=""] {
+        div[class=''] {
           position: absolute
-          right: 1.5rem
           top: 0
+          right: 1.5rem
           height: 18px
-          with: 18px
-          color: #75d2e6
           filter: hue-rotate(-30deg)
+          color: #75d2e6
+          with: 18px
 
           &:hover {
             filter: hue-rotate(-30deg) brightness(1.2)
           }
 
           &:after {
-            content: '\f216'
             position: absolute
             top: 0
             right: 0
+            z-index: -1
             display: inline-block
+            content: '\f216'
             text-transform: none
             font-weight: normal
             font-style: normal
@@ -52,7 +53,6 @@
             speak: none
             text-rendering: auto
             -webkit-font-smoothing: antialiased
-            z-index: -1
           }
         }
 
@@ -165,8 +165,8 @@
     [class*='content'] {
       clickThrough(before)
       clickThrough(after)
-      margin: 5px 0 5px .5rem
       overflow: visible
+      margin: 5px 0 5px .5rem
       height: 1.5rem
       background: transparent !important
 
@@ -362,7 +362,8 @@
       right: 0
       bottom: initial
       border: 1px solid black
+
+      // TODO: typing notification
     }
   }
-
 }
