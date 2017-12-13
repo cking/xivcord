@@ -1,5 +1,18 @@
-#app-mount .app {
-  padding: 1rem
-  background: linear-gradient(to bottom, #76726e, #313031 15px) repeat-x
-  box-shadow: 0 0 2px 1px rgba(255, 255, 255, .4) inset
+#app-mount {
+  .app {
+    padding: .5rem
+    background: linear-gradient(to bottom, #76726e, #313031 15px) repeat-x
+    box-shadow: 0 0 2px 1px rgba(255, 255, 255, .4) inset
+  }
+
+  .layer:first-child {
+    clickThrough(before)
+
+    &:before {
+      horizontal-line(top, false)
+      top: 45px
+      left: 60px
+      z-index: 666
+    }
+  }
 }
