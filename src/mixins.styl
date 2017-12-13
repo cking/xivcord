@@ -116,11 +116,13 @@ item-button(color = ItemCommon) {
   width: 42px
   height: 42px
   border: 1px solid #333
+  border-top: none
   border-radius: 5px
   background-image: radial-gradient(darken(color, .3), lighten(color, .9))
   box-shadow: 0 1px 2px black, 0 -1px 1px #fff3
 
   &:after {
+    border-radius: 4px
     background: radial-gradient(ellipse 260% 40px at top, #fff3, #fff3 30%, transparent 35%)
   }
 }

@@ -236,45 +236,125 @@
 }
 
 .private-channels {
+  clickThrough(before)
+  padding-left: 10px
+
+  &:before {
+    vertical-line(left, false)
+  }
+
+  .scroller-fzNley {
+    > :first-child {
+      display: none
+    }
+
+    header {
+      margin: 10px 20px 10px 0
+      padding: 0
+      border: 1px solid rgba(255, 255, 255, .3)
+      border-radius: 50%
+      font-size: 0
+    }
+  }
+
   .channel {
     clickThrough(before)
+    clickThrough(after)
+    overflow: visible
+    overflow: visible
+    margin: 10px 0 10px 5px
+    height: 1.5rem
     border-radius: 0
     border-top-left-radius: .75rem
     border-bottom-left-radius: .75rem
-    margin: 10px 0 10px 5px
-    overflow: visible
-    height: 1.5rem
     color: #eee1c5
-    overflow: visible
-  }
 
+    &.btn-friends {
+      height: 42px
 
-  .channel:before {
-    top: -10px
-    height: -10px
-    background: linear-gradient(to right, transparent, #313031) !important
-  }
+      a {
+        position: relative
+        padding-left: 42px
 
-  .channel.private {
-    &.selected {
+        svg {
+          display: none
+        }
+
+        &:before {
+          item-button(ItemRelic)
+          position: absolute
+          top: 1px
+          left: -10px
+          width: 42px
+          height: 42px
+          content: ''
+        }
+
+        &:after {
+          gold-tint()
+          position: absolute
+          top: 2px
+          left: -4px
+          width: 42px
+          height: 42px
+          content: ''
+          font-size: 2rem
+          font-family: RPGAwesome
+          line-height: 2.25rem
+        }
+      }
+    }
+
+    &:before {
+      z-index: -1
+      border-radius: 0
+    }
+
+    &:after {
+      top: -10px
+      bottom: -10px
+      z-index: -1
+      background: linear-gradient(to right, transparent, #313031) !important
+    }
+
+    &.selected:before {
       background: #eee1c544 !important
       box-shadow: 0 0 5px #eee1c544
     }
-    &:hover {
+
+    &:hover:before {
       background: alpha(darken(#eee1c5, 50), .3) !important
       box-shadow: 0 0 5px alpha(darken(#eee1c5, 50), .3)
     }
 
     > a {
-      background: none !important
+      z-index: 1
       padding: 0
+      background: none !important
+    }
+
+    .close {
+      display: block
+      margin-right: .5rem
+      background: none
+      color: rgba(255, 255, 255, .5)
+      font-size: 1.5rem
+      line-height: 1rem
+
+      &:hover {
+        color: rgba(255, 255, 255, .8)
+      }
+
+      &:after {
+        content: '×'
+      }
     }
   }
 
   .avatar-small {
     item-button(ItemRelic)
-    margin-left: -10px
     top: 1px
+    margin-left: -10px
     background-size: cover
 
     .status {

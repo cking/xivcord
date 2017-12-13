@@ -5,23 +5,12 @@
 @require 'elements/titlebar'
 @require 'elements/window'
 @require 'elements/guildscroller'
-
 @require 'elements/channels'
 
 body {
   background: transparent !important
 }
 
-.layer:first-child {
-  clickThrough(before)
-
-  &:before {
-    horizontal-line(top, false)
-    top: 55px
-    left: 60px
-    z-index: 666
-  }
-}
 
 .chat {
   .header-toolbar {
