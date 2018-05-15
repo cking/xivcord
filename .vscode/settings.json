@@ -1,0 +1,11 @@
+{
+  "editor.formatOnSave": true,
+  "script.commands": {
+    "commands": [
+      {
+        "id": "di.updateclassnames",
+        "script": "./.vscode/di.updateclassnames.js"
+      }
+    ]
+  }
+}
