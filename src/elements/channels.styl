@@ -23,14 +23,14 @@
       div[class*='flex'] {
         position: relative
 
-        div[class=''] {
+        & > div {
           position: absolute
           top: 0
-          right: 1.5rem
-          height: 18px
+          right: 25px
+          height: 16px
           filter: hue-rotate(-30deg)
           color: #75d2e6
-          with: 18px
+          width: 18px
 
           &:hover {
             filter: hue-rotate(-30deg) brightness(1.2)
@@ -75,7 +75,7 @@
 
         &:after {
           position: absolute
-          right: 5px
+          right: 1px
           display: inline-block
           content: '\f35e'
           text-transform: none
