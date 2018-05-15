@@ -7,9 +7,22 @@
     "build": "stylus -U -c       --hoist-atrules -o . src/theme.styl",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "di-theme",
+    "ffxiv"
+  ],
+  "homepage": "https://kurabloodlust.eu",
+  "repository": "github:cking/xivcord",
   "author": "Kura Bloodlust",
   "license": "Apache-2.0",
   "dependencies": {
     "stylus": "^0.54.5"
-  }
+  },
+  "type": "theme",
+  "pluginDependencies": [
+    "react"
+  ],
+  "css": [
+    "theme.css"
+  ]
 }
